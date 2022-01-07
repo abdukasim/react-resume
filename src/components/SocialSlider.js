@@ -2,7 +2,7 @@ import Swipe from "react-easy-swipe";
 import { useState } from "react/cjs/react.development";
 import { SocialSlideData } from "./SocialSlideData";
 
-const WorkSlider = ({ mode }) => {
+const WorkSlider = () => {
   let [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {

@@ -15,10 +15,10 @@ function App() {
   };
   if (workMode) {
     heading = <h2 className={headingClass}>Work</h2>;
-    slider = <WorkSlider mode={workMode} />;
+    slider = <WorkSlider />;
   } else {
     heading = <h2 className={headingClass}>Social</h2>;
-    slider = <SocialSlider mode={workMode} />;
+    slider = <SocialSlider />;
   }
 
   return (
