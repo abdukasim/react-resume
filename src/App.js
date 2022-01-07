@@ -1,22 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import WorkSlider from "./components/WorkSlider";
+import SocialSlider from "./components/SocialSlider";
+import { FaUserCircle } from "react-icons/fa";
 
 function App() {
+  const [workMode, setMode] = useState(true);
+  // let heading = <h2 className="heading-secondary">Work</h2>;
+  let heading;
+  const headingClass = "pt-16 pl-10 text-white";
+  let slider;
+  let logoClickHandler = () => {
+    setMode(!workMode);
+  };
+  if (workMode) {
+    heading = <h2 className={headingClass}>Work</h2>;
+    slider = <WorkSlider mode={workMode} />;
+  } else {
+    heading = <h2 className={headingClass}>Social</h2>;
+    slider = <SocialSlider mode={workMode} />;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {heading}
+        <div onClick={logoClickHandler} className="mt-24 ml-12 ">
+          <FaUserCircle className="text-8xl"></FaUserCircle>
+        </div>
+        {slider}
       </header>
     </div>
   );
