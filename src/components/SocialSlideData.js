@@ -1,10 +1,4 @@
-import {
-  FaGoogle,
-  FaFreeCodeCamp,
-  FaSwimmer,
-  FaBasketballBall,
-  FaTv,
-} from "react-icons/fa";
+import { FaSwimmer, FaBasketballBall, FaTv } from "react-icons/fa";
 
 const iconClass = "text-white text-6xl";
 
